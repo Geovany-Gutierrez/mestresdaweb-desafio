@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(to right, #000000, rgba(0, 0, 0, 0.369)),
+    url('/images/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+
+input[type=text]:focus {
+  outline: none;
+}
