@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const FormFlex = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-`;
-
 export const RedSpan = styled.span`
     color: #FF0000;
 `;
@@ -15,7 +9,7 @@ export const InputField = styled.input`
     border: none;
     border-radius: 100px;
     background-color: #FFFFFF;
-    color: #D1D1D6;
+    color: #020202;
     font-size: 1rem;
     padding: 1.5rem;
     margin-top: 1rem;
