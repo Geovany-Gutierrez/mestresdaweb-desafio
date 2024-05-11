@@ -90,5 +90,8 @@ export const Overlay = styled.div`
   z-index: 9999;
   opacity: ${({ showOverlay }) => (showOverlay ? 1 : 0)};
   transition: opacity 0.4s linear;
-  animation: 0.5s ease-in-out, ${slideAnimation} 2s ease-in-out 0.5s;
+  
+  @media (min-width: 1440px) {
+    animation: 0.5s ease-in-out, ${slideAnimation} 2s ease-in-out 0.5s;
+  }
 `;

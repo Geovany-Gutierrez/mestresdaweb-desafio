@@ -8,6 +8,7 @@ import {
   BarraNavegacaoEstilizadaCustomizada,
   BlocoConteudoEstilizado,
   ListaClicavel,
+  ListaMobileEstilizada,
 } from "../styles/Navbar.styles";
 import Logo from "./Logo";
 
@@ -34,28 +35,44 @@ const Navbar = () => {
   return (
     <BarraNavegacaoEstilizadaCustomizada>
       <ContainerEstilizado>
-        <a href="/">
-          <Logo />
-        </a>
+        <Logo />
         <ListaEstilizadaCustomizada>
-          <li><a href="/characters">Personagens</a></li>
-          <li><a href="/movies">Filmes</a></li>
-          <li><a href="/comics">Hqs</a></li>
+          <li>
+            <a href="/characters">Personagens</a>
+          </li>
+          <li>
+            <a href="/movies">Filmes</a>
+          </li>
+          <li>
+            <a href="/comics">Hqs</a>
+          </li>
           <BlocoConteudoEstilizado>
             <img src="/images/profile-picture.png" alt="Profile" />
-            <ListaClicavel><Logout /></ListaClicavel>
+            <ListaClicavel>
+              <Logout />
+            </ListaClicavel>
           </BlocoConteudoEstilizado>
         </ListaEstilizadaCustomizada>
         <MenuHamburguerEstilizado onClick={toggleMenu}>
-          <IconeCustomizado size={24} color="#FFF" />
+          <IconeCustomizado size={48} color="#FFF" />
         </MenuHamburguerEstilizado>
       </ContainerEstilizado>
       {isMenuOpen && (
         <>
-          <ItemMobileEstilizado><a href="/characters">Characters</a></ItemMobileEstilizado>
-          <ItemMobileEstilizado><a href="/movies">Movies</a></ItemMobileEstilizado>
-          <ItemMobileEstilizado><a href="/comics">Comics</a></ItemMobileEstilizado>
-          <ItemMobileEstilizado><Logout /></ItemMobileEstilizado>
+          <ListaMobileEstilizada>
+            <ItemMobileEstilizado>
+              <a href="/characters">Personagens</a>
+            </ItemMobileEstilizado>
+            <ItemMobileEstilizado>
+              <a href="/movies">Filmes</a>
+            </ItemMobileEstilizado>
+            <ItemMobileEstilizado>
+              <a href="/comics">Hqs</a>
+            </ItemMobileEstilizado>
+            <ItemMobileEstilizado>
+              <Logout />
+            </ItemMobileEstilizado>
+          </ListaMobileEstilizada>
         </>
       )}
     </BarraNavegacaoEstilizadaCustomizada>
