@@ -5,7 +5,7 @@ import {
   FormLabel,
   SubmitButton,
   RedSpan,
-} from "../styles/form.styles";
+} from "../styles/Form.styles";
 
 // Componente
 import React, { useState } from "react";

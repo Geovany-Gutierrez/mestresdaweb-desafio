@@ -1,5 +1,5 @@
 import { FaBars as IconeCustomizado } from "react-icons/fa";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import {
   MenuHamburguerEstilizado,
   ItemMobileEstilizado,
@@ -27,6 +27,19 @@ const Logout = () => {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [categoriaAtual, setCategoriaAtual] = useState<string>("personagens"); // Adicionado tipo string ao estado
+  const mudarCategoria = (categoria: string) => {
+    // Adicionado tipo string ao parâmetro
+    setCategoriaAtual(categoria);
+    localStorage.setItem("categoriaAtual", categoria);
+  };
+
+  useEffect(() => {
+    const categoriaSalva = localStorage.getItem("categoriaAtual");
+    if (categoriaSalva) {
+      setCategoriaAtual(categoriaSalva);
+    }
+  }, []);
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prevState) => !prevState);
@@ -37,14 +50,14 @@ const Navbar = () => {
       <ContainerEstilizado>
         <Logo />
         <ListaEstilizadaCustomizada>
-          <li>
-            <a href="/characters">Personagens</a>
+          <li onClick={() => mudarCategoria("personagens")}>
+            <a href={`/${categoriaAtual}`}>Personagens</a>
           </li>
-          <li>
-            <a href="/movies">Filmes</a>
+          <li onClick={() => mudarCategoria("filmes")}>
+            <a href={`/${categoriaAtual}`}>Filmes</a>
           </li>
-          <li>
-            <a href="/comics">Hqs</a>
+          <li onClick={() => mudarCategoria("hqs")}>
+            <a href={`/${categoriaAtual}`}>Hqs</a>
           </li>
           <BlocoConteudoEstilizado>
             <img src="/images/profile-picture.png" alt="Profile" />
@@ -61,13 +74,28 @@ const Navbar = () => {
         <>
           <ListaMobileEstilizada>
             <ItemMobileEstilizado>
-              <a href="/characters">Personagens</a>
+              <a
+                onClick={() => mudarCategoria("hqs")}
+                href={`/${categoriaAtual}`}
+              >
+                Personagens
+              </a>
             </ItemMobileEstilizado>
             <ItemMobileEstilizado>
-              <a href="/movies">Filmes</a>
+              <a
+                onClick={() => mudarCategoria("filmes")}
+                href={`/${categoriaAtual}`}
+              >
+                Filmes
+              </a>
             </ItemMobileEstilizado>
             <ItemMobileEstilizado>
-              <a href="/comics">Hqs</a>
+              <a
+                onClick={() => mudarCategoria("hqs")}
+                href={`/${categoriaAtual}`}
+              >
+                Hqs
+              </a>
             </ItemMobileEstilizado>
             <ItemMobileEstilizado>
               <Logout />
