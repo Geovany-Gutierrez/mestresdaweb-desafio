@@ -19,7 +19,7 @@ const Form: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [formType, setFormType] = useState(0); // 0 é o login e 1 é o registro
-  const [loggedIn, setLoggedIn] = useState(false); 
+  const [, setLoggedIn] = useState(false); 
 
   const handleToggleForm = () => {
     setUsername(""); // Limpa o username ao alternar entre os formulários

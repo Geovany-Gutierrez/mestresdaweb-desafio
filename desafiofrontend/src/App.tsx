@@ -4,7 +4,7 @@ import HomePage from "./pages/home/HomePage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [currentUser, setCurrentUser] = useState(null);
+  const [, setCurrentUser] = useState(null);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
