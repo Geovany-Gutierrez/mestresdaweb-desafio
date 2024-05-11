@@ -15,4 +15,16 @@ export const StyledLogo = styled.h1`
     font-size: 3rem;
     background-color: #FF0000;
     color: #FFFFFF;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.5rem;
+    }
 `;
