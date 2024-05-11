@@ -5,7 +5,7 @@ import {
   FormLabel,
   SubmitButton,
   RedSpan,
-} from "../styles/Form.styles";
+} from "../styles/Form.styles.tsx";
 
 // Componente
 import React, { useState } from "react";
@@ -100,7 +100,7 @@ const Form: React.FC = () => {
       onSubmit={formType === 0 ? handleLogin : handleRegister}
       action=""
     >
-      <Title htmlFor="username">
+      <Title>
         {formType === 0 ? "Bem vindo(a) de volta!" : "Crie sua conta!"}
       </Title>
       <Paragraph>
