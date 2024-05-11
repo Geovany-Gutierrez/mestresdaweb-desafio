@@ -77,7 +77,11 @@ export const Background = styled.div`
   }
 `;
 
-export const Overlay = styled.div`
+type OverlayProps = {
+  showOverlay: boolean;
+};
+
+export const Overlay = styled.div<OverlayProps>`
   position: absolute;
   top: 0;
   right: 0;
