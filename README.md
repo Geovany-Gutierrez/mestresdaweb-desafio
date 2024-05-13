@@ -8,8 +8,6 @@ Este é um projeto para os fãs da Marvel, onde você pode criar sua conta, faze
 
 ### Instruções de Instalação
 
-https://geovany-gutierrez.github.io/Documentation/docs/EstudoCodigos/HomePage
-
 1. Clone o repositório:
 
    ```
