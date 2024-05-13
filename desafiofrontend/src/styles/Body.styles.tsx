@@ -13,7 +13,6 @@ export const StyledCarouselWrapper = styled.div`
   align-items: center;
 `;
 
-
 export const StyledCarouselSlide = styled.div`
   flex: 0 0 auto;
   width: calc(600px);
@@ -24,8 +23,8 @@ export const StyledCarouselSlide = styled.div`
   }
 
   @media (max-width: 1024px) {
-    width: calc(50% - 1rem); 
-    margin-right: 0.5rem; 
+    width: calc(80% - 1rem);
+    margin-right: 0.5rem;
   }
 
   @media (max-width: 768px) {
@@ -33,7 +32,7 @@ export const StyledCarouselSlide = styled.div`
   }
 
   @media (min-width: 1440px) {
-    width: calc(33.333% - 1rem); 
+    width: calc(33.333% - 1rem);
     margin-right: 0.8rem;
   }
 `;
@@ -53,25 +52,24 @@ export const StyledCardImage = styled.div<{ $imageUrl?: string }>`
   background-image: url(${(props) =>
     props.$imageUrl ? props.$imageUrl : "/images/background.jpg"});
   background-size: cover;
-  background-position: center;
+  background-position: cover;
   background-repeat: no-repeat;
   margin: auto;
   height: 65vw;
   width: 80%;
   border-radius: 8px;
-  object-fit: cover;
 
   @media (max-width: 425px) {
-    width: 80%;
-    height: 100vw;
+    width: 100%;
+    height: 150vw;
   }
-  
+
   @media (min-width: 426px) and (max-width: 1024px) {
-    width: 80%;
-    height: 80vw;
+    width: 60%;
+    height: 70vw;
   }
   @media (min-width: 1440px) {
-    width: 80%; 
+    width: 80%;
     height: 40vw;
   }
 `;
@@ -181,8 +179,8 @@ export const StyledDropdown = styled.select`
   background-color: #020202;
   font-size: 1.2rem;
   width: 15%;
-  box-shadow: 10px 10px 20px -7px rgba(111,0,0,1);
-  
+  box-shadow: 10px 10px 20px -7px rgba(111, 0, 0, 1);
+
   &:hover {
     border-color: #8r0f10;
   }
@@ -192,9 +190,8 @@ export const StyledDropdown = styled.select`
     border-color: #480000;
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 80%;
     margin-left: 20px;
   }
-
 `;

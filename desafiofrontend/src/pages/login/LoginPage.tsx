@@ -14,8 +14,6 @@ const LoginPage = () => {
   const [showOverlay, setShowOverlay] = useState(true);
 
   useEffect(() => {
-    // Verifica se a largura da janela é maior ou igual a 1440px
-
     // Define um temporizador para alterar o estado após as animações serem concluídas
     const timer = setTimeout(() => {
       setShowOverlay(false);

@@ -38,7 +38,7 @@ const CarouselCard = () => {
   const [listaCompleta, setListaCompleta] = useState<CardInfo[]>([]);
   // Estado para armazenar a categoria atual
   const [categoriaAtual, setCategoriaAtual] = useState<string>("filmes"); // Valor padrão
-
+  
   useEffect(() => {
     // Carregar a categoria atual do localStorage ou usar 'filmes' como padrão
     const categoriaSalva = localStorage.getItem("categoriaAtual") || "filmes";
