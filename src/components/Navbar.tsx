@@ -75,7 +75,7 @@ const Navbar = () => {
           <ListaMobileEstilizada>
             <ItemMobileEstilizado>
               <a
-                onClick={() => mudarCategoria("hqs")}
+                onClick={() => mudarCategoria("personagens")}
                 href={`/${categoriaAtual}`}
               >
                 Personagens

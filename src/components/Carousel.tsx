@@ -16,6 +16,7 @@ import {
   StyledImageTitle,
   StyledDropdown,
   StyledGridWrapper,
+  Icone,
 } from "../styles/Body.styles";
 
 interface CardInfo {
@@ -108,7 +109,6 @@ const CarouselCard = ({ categoria }: { categoria: string }) => {
     </StyledGridWrapper>
   );
 };
-
 // Componente Card individual
 const Card = ({
   item,
@@ -129,7 +129,6 @@ const Card = ({
     <StyledCardContainer $isExpanded={isExpanded}>
       <StyledCardImage $imageUrl={item.imageUrl}>
         {!isExpanded && (
-          // Conteúdo do card quando não está expandido
           <StyledImageDescription>
             <StyledImageTitle>{item.name}</StyledImageTitle>
             <StyledImageText>{item.description}</StyledImageText>
@@ -140,37 +139,39 @@ const Card = ({
         )}
       </StyledCardImage>
       {isExpanded && (
-        // Conteúdo do card quando está expandido
         <StyledCardExpand>
           <StyledExpandWrapper>
             <StyledExpandTitle>{item.name}</StyledExpandTitle>
-            {/* Exibição condicional baseada na categoria */}
             {categoriaAtual === "personagens" ? (
               <ul>
+                <StyledImageTitle>Aparições</StyledImageTitle>
                 {/* Lista de aparições para personagens */}
                 {item.aparicoes?.map((aparicao, index) => (
-                  <li key={index}>{aparicao}</li>
+                  <StyledImageText key={index}>{aparicao}</StyledImageText>
                 ))}
               </ul>
             ) : categoriaAtual === "filmes" ? (
               <StyledExpandText>
-                <h3>Disponivel para Streaming:</h3>{" "}
-                <ul>
-                  <li>{item.streaming}</li>
-                </ul>
+                <StyledImageText>{item.description}</StyledImageText>
+                <h3>Disponível para Streaming:</h3>
+                {/* Renderiza o ícone de streaming se disponível */}
+                {item.streaming && (
+                  <Icone src={item.streaming} alt="Streaming Service" />
+                )}
               </StyledExpandText>
             ) : categoriaAtual === "hqs" ? (
               <ul>
-                <h3>Disponivel para compra: </h3>
-                {/* Lista de lojas disponíveis para compra para HQs */}
-                {item.disponivelParaCompra?.map((loja, index) => (
-                  <li key={index}>{loja}</li>
+                <StyledImageText>{item.description}</StyledImageText>
+                <h3>Disponível para compra:</h3>
+                {/* Renderiza os ícones das lojas se disponíveis */}
+                {item.disponivelParaCompra?.map((url, index) => (
+                  <Icone key={index} src={url} alt="Store" />
                 ))}
               </ul>
             ) : null}
+
             <h3>Avaliações dos Fãs</h3>
             <div>
-              {/* Ícones de estrela para avaliação */}
               <FaStar color="yellow" />
               <FaStar color="yellow" />
               <FaStar color="yellow" />
@@ -181,7 +182,6 @@ const Card = ({
               <FaTimes size={20} />
             </StyledCloseButton>
           </StyledExpandWrapper>
-          {/* Botão para fechar a expansão do card */}
         </StyledCardExpand>
       )}
     </StyledCardContainer>

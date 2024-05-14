@@ -4,6 +4,36 @@
   margin: 0;
 }
 
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #EB0000;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #585C5D;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #C20000;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #080075;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #090FA3;
+}
+
 body {
   background-image: linear-gradient(to right, #000000, rgba(0, 0, 0, 0.369)), 
   url('/images/background.jpg');

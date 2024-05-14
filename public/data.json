@@ -5,7 +5,7 @@
       "name": "Capitão América - O Primeiro Vingador",
       "description": "Em Capitão América: O Primeiro Vingador, conhecemos a história de Steve Rogers (Chris Evans) e como ele se tornou o melhor soldado do mundo.",
       "imageUrl": "/images/capamerica-movie.jpg",
-      "streaming": "Disney",
+      "streaming": "/images/disneyLogo.jpg",
       "cronologia": 1,
       "anoLancamento": 2011
     },
@@ -14,7 +14,7 @@
       "name": "Capitã Marvel",
       "description": "Capitã Marvel, parte do exército de elite dos Kree, uma raça alienígena, encontra-se no meio de uma batalha entre seu povo e os Skrulls.",
       "imageUrl": "/images/capitamarvel-movie.jpg",
-      "streaming": "Disney",
+      "streaming": "/images/disneyLogo.jpg",
       "cronologia": 2,
       "anoLancamento": 2019
     },
@@ -23,7 +23,7 @@
       "name": "Homem de Ferro",
       "description": "Tony Stark (Robert Downey Jr.) é um bilionário, um brilhante inventor, ao ser sequestrado, ele é obrigado a construir uma arma devastadora, invés disso, cria uma armadura capaz de mudar a história.",
       "imageUrl": "/images/ironman-movie.jpg",
-      "streaming": "Disney",
+      "streaming": "/images/disneyLogo.jpg",
       "cronologia": 3,
       "anoLancamento": 2008
     },
@@ -32,7 +32,7 @@
       "name": "Homem de Ferro 2",
       "description": "O mundo já sabe que o inventor bilionário Tony Stark (Robert Downey Jr.) é o super-herói blindado Homem de Ferro. Sofrendo pressão do governo, da mídia e do público para compartilhar sua tecnologia com as forças armadas.",
       "imageUrl": "/images/ironman2-movie.jpg",
-      "streaming": "Disney",
+      "streaming": "/images/disneyLogo.jpg",
       "cronologia": 4,
       "anoLancamento": 2010
     },
@@ -41,7 +41,7 @@
       "name": "Thor",
       "description": "Quando é banido do reino de Asgard e exilado na Terra, o arrogante guerreiro Thor (Chris Hemsworth) é obrigado a lutar para reaver seus poderes perdidos.",
       "imageUrl": "/images/thor-movie.jpg",
-      "streaming": "Disney",
+      "streaming": "/images/disneyLogo.jpg",
       "cronologia": 5,
       "anoLancamento": 2011
     }
@@ -52,28 +52,28 @@
       "name": "Thor: Vikings",
       "description": "Garth Ennis e sua violência atacam novamente na HQ que leva a violência das histórias de Thor ao limite! Na minissérie de 2003 vemos vikings de um passado distante voltando a vida.",
       "imageUrl": "/images/thor-hq.jpg",
-      "disponivelParaCompra": ["Americanas", "Amazon"]
+      "disponivelParaCompra": ["/images/americanasLogo.png", "https://img.shields.io/badge/Amazon-F90?logo=amazon&logoColor=fff&style=for-the-badge"]
     },
     {
       "id": 2,
       "name": "Surfista Prateado: Parábola",
       "description": "O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado, Galactus jurou não consumir o planeta, mas e se, em vez disso, ele transformar a civilização em seus adoradores?",
       "imageUrl": "/images/surfistaprateado-hq.jpg",
-      "disponivelParaCompra": ["Amazon"]
+      "disponivelParaCompra": ["https://img.shields.io/badge/Amazon-F90?logo=amazon&logoColor=fff&style=for-the-badge"]
     },
     {
       "id": 3,
       "name": "Wolverine: Origens",
       "description": "Origem é uma minissérie em quadrinhos publicada pela Marvel Comics em seis edições, entre 2001 e 2002. A história conta a revelação do passado do personagem Wolverine.",
       "imageUrl": "/images/wolverine-hq.jpg",
-      "disponivelParaCompra": ["Americanas"]
+      "disponivelParaCompra": ["/images/americanasLogo.png"]
     },
     {
       "id": 4,
       "name": "Sentinel of Liberty",
       "description": "Quando uma trágica batalha deixa um buraco na cidade de Stamford, matando centenas de pessoas, o governo americano exige que todos os super-heróis revelem sua identidade e registrem seus poderes.",
       "imageUrl": "/images/capitaoamerica-hq.jpg",
-      "disponivelParaCompra": ["Americanas", "Amazon"]
+      "disponivelParaCompra": ["/images/americanasLogo.png", "https://img.shields.io/badge/Amazon-F90?logo=amazon&logoColor=fff&style=for-the-badge"]
     }
   ],
   "personagens": [
