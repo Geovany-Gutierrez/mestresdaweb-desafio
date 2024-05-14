@@ -17,6 +17,7 @@ import {
   StyledDropdown,
   StyledGridWrapper,
   Icone,
+  RatingTitle,
 } from "../styles/Body.styles";
 
 interface CardInfo {
@@ -170,7 +171,7 @@ const Card = ({
               </ul>
             ) : null}
 
-            <h3>Avaliações dos Fãs</h3>
+            <RatingTitle>Avaliações dos Fãs</RatingTitle>
             <div>
               <FaStar color="yellow" />
               <FaStar color="yellow" />

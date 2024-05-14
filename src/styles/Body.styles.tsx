@@ -68,9 +68,14 @@ export const StyledCardImage = styled.div<{ $imageUrl?: string }>`
   width: 80%;
   border-radius: 8px;
 
-  @media (max-width: 424px) {
+  @media (max-width: 374px) {
     width: 100%;
-    height: 150vw;
+    height: 125vw;
+  }
+
+  @media (min-width: 375px) {
+    width: 100%;
+    height: 115vw;
   }
 
   @media (min-width: 425px) {
@@ -255,7 +260,7 @@ export const StyledDropdown = styled.select`
 
 export const Icone = styled.img`
   /* Estilos padrão para mobile */
-  height: 2.5em;
+  height: 0.9em;
   margin-right: 10px;
   width: auto;
 
@@ -275,3 +280,19 @@ export const Icone = styled.img`
     height: 2em;
   }
 `;
+
+export const RatingTitle = styled.h3`
+  font-size: 1.4rem;
+  @media (max-width: 374px) {
+    font-size: 0.7rem;
+  }
+  @media (min-width: 375px) {
+    font-size: 1rem;
+  }
+  @media (min-width: 767px) {
+    font-size: 0.7rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+`
