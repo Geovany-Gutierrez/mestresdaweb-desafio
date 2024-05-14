@@ -31,14 +31,13 @@ interface CardInfo {
 }
 
 // Componente principal que renderiza o carrossel de cards
-const CarouselCard = () => {
+const CarouselCard = ({ categoria }: { categoria: string }) => {
+  const [categoriaAtual, setCategoriaAtual] = useState<string>(categoria);
   // Estado para armazenar a lista de cards
   const [lista, setLista] = useState<CardInfo[]>([]);
   // Estado para armazenar a lista completa de filmes para filtragem
   const [listaCompleta, setListaCompleta] = useState<CardInfo[]>([]);
-  // Estado para armazenar a categoria atual
-  const [categoriaAtual, setCategoriaAtual] = useState<string>("filmes"); // Valor padrão
-  
+
   useEffect(() => {
     // Carregar a categoria atual do localStorage ou usar 'filmes' como padrão
     const categoriaSalva = localStorage.getItem("categoriaAtual") || "filmes";

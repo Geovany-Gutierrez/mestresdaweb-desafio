@@ -1,20 +1,16 @@
 // HomePage.tsx
-import React from 'react';
+/*import React from 'react';
 import Navbar from "../../components/Navbar";
-import CarouselCard from '../../components/Body';
+import CarouselCard from '../../components/Carousel';
 
-interface HomePageProps {
-  categoria: string;
-}
-
-const HomePage: React.FC<HomePageProps> = ({ }) => {
+const HomePage: React.FC= ({ }) => {
 
   return (
     <>
       <Navbar />
-      <CarouselCard />
+      <CarouselCard cat/>
     </>
   );
 }
 
-export default HomePage;
+export default HomePage;*/

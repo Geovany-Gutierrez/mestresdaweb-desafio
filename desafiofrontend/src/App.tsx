@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-import LoginPage from "./pages/login/LoginPage";
-import HomePage from "./pages/home/HomePage";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import LoginPage from "./pages/login/LoginPage";
+import Personagens from "./routes/Personagens";
+import Filmes from "./routes/Filmes";
+import Hqs from "./routes/Hqs";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -16,28 +17,20 @@ function App() {
 
   return (
     <Router>
-      {isLoggedIn ? (
-        <Routes>
-          <Route path="/personagens" element={<HomePage categoria="personagens" />} />
-          <Route path="/filmes" element={<HomePage categoria="filmes" />} />
-          <Route path="/hqs" element={<HomePage categoria="hqs" />} />
-          <Route path="*" element={<RedirectToPersonagens />} />
-        </Routes>
-      ) : (
-        <LoginPage />
-      )}
+      <Routes>
+        {isLoggedIn ? (
+          <>
+            <Route path="/personagens" element={<Personagens />} />
+            <Route path="/filmes" element={<Filmes />} />
+            <Route path="/hqs" element={<Hqs />} />
+            <Route path="*" element={<Navigate replace to="/personagens" />} />
+          </>
+        ) : (
+          <Route path="*" element={<LoginPage />} />
+        )}
+      </Routes>
     </Router>
   );
-}
-
-// Componente para redirecionar para "/personagens"
-function RedirectToPersonagens() {
-  const navigate = useNavigate();
-  useEffect(() => {
-    navigate('/personagens');
-  }, [navigate]);
-
-  return null;
 }
 
 export default App;
