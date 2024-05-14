@@ -1,16 +1,8 @@
-// HomePage.tsx
-import React from 'react';
-import Navbar from "../components/Navbar";
-import CarouselCard from '../components/Carousel';
+import React from "react";
+import HomeSection from "../pages/home/HomePage";
 
-const Hqs: React.FC= ({ }) => {
-
-  return (
-    <>
-      <Navbar />
-      <CarouselCard categoria="hqs" />
-    </>
-  );
-}
+const Hqs: React.FC = () => {
+  return <HomeSection categoria="hqs" />;
+};
 
 export default Hqs;
