@@ -1,8 +1,10 @@
----
-
 ## Desafio Mestres da Web
 
 Este é um projeto para os fãs da Marvel, onde você pode criar sua conta, fazer login e ver as informações dos seus personagens preferidos!
+
+[Veja o sistema aqui](https://mestresdaweb-desafio.vercel.app/filmes)
+
+[![Texto alternativo](imagemShowcase.png)](https://mestresdaweb-desafio.vercel.app/filmes)
 
 [Acesse a documentação aqui](https://geovany-gutierrez.github.io/Documentation/docs/EstudoCodigos/HomePage)
 
@@ -56,5 +58,3 @@ npm run start
 - Login e cadastro com local storage, usando um token para manter o estado do login.
 - Renderização condicional para exibir a tela de login caso o usuário não esteja conectado.
 - Consumo de dados feito com JSON.
-
----
